@@ -1,0 +1,62 @@
+/*тут важен порядок!*/
+@font-face {
+font-family: "Rubik";
+font-style: normal;
+font-weight: 400;
+src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+font-display: swap;
+}
+
+@font-face {
+font-family: "Rubik";
+font-style: normal;
+font-weight: 700;
+src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+font-display: swap;
+}
+
+@font-face {
+font-family: "Raleway";
+font-style: normal;
+font-weight: 800;
+src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+font-display: swap;
+}
+
+/*общий шрифт*/
+body {
+font-family: "Rubik", "Helvetica", sans-serif;
+font-size: 18px;
+line-height: 30px;
+padding: 0;
+margin: 0;
+background: #ffffff;
+/**/
+height: 100%;
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+min-height: 100vh;
+/*Сглаживание текста*/
+-webkit-font-smoothing: antialiased;
+-moz-font-smoothing: antialiased;
+text-rendering: optimizelegibility;
+/*min-width: 1440px; раскоментировать в конце*/
+}
+
+.body-container {
+max-width: 1160px;
+margin: 0 auto;
+}
+
+/*--Скрытый элемент--*/
+.visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+padding: 0;
+border: 0;
+clip: rect(0 0 0 0);
+overflow: hidden;
+}

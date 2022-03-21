@@ -1,62 +1,187 @@
 /*тут важен порядок!*/
 @font-face {
-font-family: "Rubik";
-font-style: normal;
-font-weight: 400;
-src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
-font-display: swap;
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
-font-family: "Rubik";
-font-style: normal;
-font-weight: 700;
-src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
-font-display: swap;
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
-font-family: "Raleway";
-font-style: normal;
-font-weight: 800;
-src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
-font-display: swap;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+    font-display: swap;
 }
 
 /*общий шрифт*/
 body {
-font-family: "Rubik", "Tahoma", sans-serif;
-font-size: 18px;
-line-height: 30px;
-padding: 0;
-margin: 0;
-background: #ffffff;
-/**/
-height: 100%;
-display: flex;
-justify-content: space-between;
-flex-direction: column;
-min-height: 100vh;
-/*Сглаживание текста*/
--webkit-font-smoothing: antialiased;
--moz-font-smoothing: antialiased;
-text-rendering: optimizelegibility;
-/*min-width: 1440px; раскоментировать в конце*/
+    font-family: "Rubik", "Tahoma", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
+    background: #ffffff;
+    /**/
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+    /*Сглаживание текста*/
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    /*min-width: 1440px; раскоментировать в конце*/
 }
 
 .body-container {
-max-width: 1160px;
-margin: 0 auto;
+    max-width: 1160px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    flex-grow: 1;
 }
 
 /*--Скрытый элемент--*/
 .visually-hidden {
-position: absolute;
-width: 1px;
-height: 1px;
-margin: -1px;
-padding: 0;
-border: 0;
-clip: rect(0 0 0 0);
-overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.search {
+    display: flex; /*схлопывает input и button*/
+    align-content: center;
+    justify-content: center;
+
+    font-family: "Rubik", "Tahoma", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.search-input {
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: #000000;
+
+    background: transparent;
+    border: 2px solid #000000;
+    border-radius: 20px 0 0 20px;
+    min-height: 40px;
+    padding: 0 22px 0 48px;
+    flex-grow: 1;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: text;
+}
+
+.search-input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.search-button {
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: #000000;
+
+    background: transparent;
+    border: 2px solid #000000;
+    border-radius: 0 20px 20px 0;
+    min-width: 160px;
+    min-height: 40px;
+    flex-shrink: 0;
+    margin: 0;
+    margin-left: -2px;
+    box-sizing: border-box;
+    
+}
+
+.user-menu-link {
+    font-family: "Rubik", "Tahoma", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.navigation-link,
+.catalog-button {
+    font-family: "Raleway", "Tahoma", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21.13px;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+}
+
+.catalog-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    padding: 2px;
+}
+
+.catalog-button-span {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    position: relative;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    opacity: 0.3;
+    display: inline-block;
+}
+
+.close-catalog::before,
+.open-catalog:after,
+.open-catalog::before {
+  position: absolute;
+  top: 50px;
+  left: 6px;
+  width: 13px;
+  height: 1px;
+  background-color: #000000;
+  content: "";
+}
+
+.next::after {
+  transform: rotate(-90deg);
+}
+
+
+.navigation {
+    display: grid;
 }

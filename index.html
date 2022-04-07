@@ -25,36 +25,101 @@
 					<button class="search-button" type="submit">Найти</button>
 				</form>
 
-				<ul class="user-menu">
+				<div class="user-menu">
 					<ul class="user-menu-left">
 						<li class="user-menu-item">
 							<a class="user-menu-link login" href="#">
-								<svg aria-hidden="true" focusable="false" width="13" height="12" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M.5 12.39h13c-.2-2.6-2.1-4.8-4.7-5.5 1-.6 1.7-1.7 1.7-3 0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5c0 1.3.7 2.4 1.7 3-2.6.7-4.5 2.9-4.7 5.5Z"/>
+								<svg aria-hidden="true" focusable="false" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 12h13c-.2-2.6-2.1-4.8-4.7-5.5 1-.6 1.7-1.7 1.7-3C10 1.6 8.4 0 6.5 0S3 1.6 3 3.5c0 1.3.7 2.4 1.7 3C2.1 7.2.2 9.4 0 12Z"/>
 								</svg>Войти</a>
 						</li>
 					</ul>
-          <ul class="user-menu-right">
-            <li class="user-menu-item">
-              <a class="user-menu-link" href="#">
-                <svg aria-hidden="true" focusable="false" width="10" height="12" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 .39H4v12h2v-12ZM2 4.39H0v8h2v-8ZM10 3.39H8v9h2v-9Z"/>
-                </svg>Сравнить</a>
-            </li>
-            <li class="user-menu-item">
-              <a class="user-menu-link" href="#">
-                <output class="product-count-output" name="product-count">2</output>
-                <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m15.3 5.39-3.5.2L8.6.69c-.1-.2-.4-.3-.6-.3-.2 0-.5.1-.6.3l-3.2 4.9H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1l1.9-6.9v-.2c0-.4-.3-.8-.7-.8ZM8 2.29l2.2 3.2H5.9L8 2.29Z"/>
-                </svg>Корзина</a>				
-					  </li>
-          </ul>
-				</ul>
+					<ul class="user-menu-right">
+						<li class="user-menu-item">
+							<a class="user-menu-link" href="#">
+								<svg aria-hidden="true" focusable="false" width="10" height="12" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6 .39H4v12h2v-12ZM2 4.39H0v8h2v-8ZM10 3.39H8v9h2v-9Z"/>
+								</svg>Сравнить</a>
+						</li>
+						<li class="user-menu-item">
+							<a class="user-menu-link" href="#">
+								<output class="product-count-output" name="product-count">2</output>
+								<svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="m15.3 5.39-3.5.2L8.6.69c-.1-.2-.4-.3-.6-.3-.2 0-.5.1-.6.3l-3.2 4.9H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1l1.9-6.9v-.2c0-.4-.3-.8-.7-.8ZM8 2.29l2.2 3.2H5.9L8 2.29Z"/>
+								</svg>Корзина</a>
+							
+							<div class="popover popover-close">
+								<h2 class="visually-hidden">Корзина</h2>
+								<ul class="cart-items-list">
+									<li class="cart-item">
+										<a class="cart-item-link" href="#">
+											<img class="cart-item-image" width="39" height="43" src="images/product-1.jpg" alt="Фото товара">
+											<span class="cart-item-title">Любительская селфи-палка</span>
+										</a>
 
-				<button class="catalog-button">
+										<button class="cart-item-delete-button" type="button">
+											<span class="visually-hidden">Удалить из корзины</span>
+										</button>
+									</li>
+									<li class="cart-item">
+										<a class="cart-item-link" href="#">
+											<img class="cart-item-image" width="39" height="43" src="images/product-2.jpg" alt="Фото товара">
+											<span class="cart-item-title">Профессиональная селфи-палка</span>
+										</a>
+
+										<button class="cart-item-delete-button" type="button">
+											<span class="visually-hidden">Удалить из корзины</span>
+										</button>
+									</li>
+								</ul>
+
+								<div>
+									<span>Товаров: <output name="product-count">2</output></span>
+									<span>Сумма: <output name="product-price">2000</output> ₽</span>
+								</div>
+
+								<button class="button popover-button" type="button">Открыть корзину</button>
+							</div>	
+						</li>
+					</ul>
+				</div>
+
+				<button class="catalog-button open-catalog close-catalog">
 					Каталог товаров
-					<span class="catalog-button-span open-catalog close-catalog"></span>
+					<span class="catalog-button-span"></span>
 				</button>
+				<ul class="catalog-list catalog-list-close">
+					<li class="catalog-list-item">
+						<ul class="catalog-section-list">
+							<li class="catalog-section-item">
+								<a class="catalog-section-item-link" href="#">Виртуальная реальность</a>
+							</li>
+							<li class="catalog-section-item">
+								<a class="catalog-section-item-link" href="catalog.html">Моноподы для селфи</a>
+							</li>
+							<li class="catalog-section-item">
+								<a class="catalog-section-item-link" href="#">Экшн-камеры</a>
+							</li>
+						</ul>
+					</li>
+					<li class="catalog-list-item">
+						<ul class="catalog-section-list">
+							<li class="catalog-section-item">
+								<a class="catalog-section-item-link" href="#">Фитнес-браслеты</a>
+							</li>
+							<li class="catalog-section-item">
+								<a class="catalog-section-item-link" href="#">Умные часы</a>
+							</li>
+						</ul>
+					</li>
+					<li class="catalog-list-item">
+						<ul class="catalog-section-list">
+							<li class="catalog-section-item">
+								<a class="catalog-section-item-link" href="#">Квадракоптеры</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
 
 				<ul class="navigation-menu">
 					<li class="navigation-item">
@@ -185,7 +250,7 @@
 
 						<div class="slider-info">
 							<span class="slider-number">03</span> 
-							<h2 class="h2">Делай селфи,<dr> как Бен Стиллер!</h2>
+							<h2 class="h2">Делай селфи,<br> как Бен Стиллер!</h2>
 							<p class="p">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
 							<div class="slider-wrapper-wrapper">
 								<a class="button yellow-button" href="#">
@@ -331,15 +396,11 @@
 					</div>
 					Доставим редкий товар под заказ
 					<div class="emblem">
-						<span class="tooltip">
-							<button class="dop-info" type="button" aria-labelledby="tooltip-label">
-									<span class="visually-hidden">Посмотреть дополнительную информацию</span>
-									<svg width="2" height="12" viewBox="0 0 2 12" fill="#000000" xmlns="http://www.w3.org/2000/svg">
-										<path d="M2 0H0V2H2V0Z"/>
-										<path d="M2 4H0V12H2V4Z"/>
-									</svg>										
-							</button>
-							<span class="tooltip-text visually-hidden" role="tooltip" id="tooltip-label">Text</span>
+						<span class="exclusive-delivery-tooltip">
+							<svg width="2" height="12" viewBox="0 0 2 12" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+								<path d="M2 0H0V2H2V0Z"/>
+								<path d="M2 4H0V12H2V4Z"/>
+							</svg>										
 						</span>
 					</div>
 				</a>
@@ -460,6 +521,71 @@
         </a>
       </div>
 	</footer>
+
+	<!-- Модальное окно -->
+	<div class="modal-container modal-container-close">
+		<div class="modal modal-exclusive-delivery">
+			<div class="modal-form-h2">
+				<h2 class="h2">Доставка под заказ</h2>
+				<button class="close-window">
+					<span class="visually-hidden">Закрыть окно</span>
+				</button>
+			</div>
+
+			<form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+				<div class="field-group field-group-name">
+					<label class="modal-form-label" for="user-name">Ваше имя:</label>
+
+					<input class="modal-input name" type="text" id="user-name" name="name" placeholder="Введите имя" autocomplete="off" required>
+					<span class="vaild-invalid-text" data-text-valid=" " data-text-invalid="Добавьте имя"></span>
+
+				</div>
+			
+				<div class="field-group field-group-email">
+					<label class="modal-form-label" for="user-e-mail">Ваш e-mail:</label>
+
+					<input class="modal-input e-mail" type="email" id="user-e-mail" name="e-mail" placeholder="Введите e-mail" autocomplete="off" required>
+					<span class="vaild-invalid-text" data-text-valid="Забавный у вас адрес" data-text-invalid="Забавный у вас адрес"></span>
+
+				</div>
+
+				<div class="field-group field-group-product">
+					<label class="modal-form-label" for="product-description">Что нужно привезти:</label>
+					<input class="modal-input" type="text" id="product-description" name="product-description" placeholder="В свободной форме" autocomplete="off" required>
+						<!--<textarea class="modal-input" type="text" rows="1" id="product-description" name="product-description" placeholder="В свободной форме" required></textarea>-->
+				</div>
+
+				<div class="field-group .field-group-count">
+					<span class="modal-form-label wrapper-i">
+						<label class="modal-form-label" for="product-count">Количество:</label>
+						<span class="tooltip">
+							<button class="dop-info" type="button" aria-labelledby="tooltip-label">
+									<span class="visually-hidden">Посмотреть дополнительную информацию</span>
+							</button>
+							<span class="tooltip-text" role="tooltip" id="tooltip-label">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+						</span>
+					</span>	
+
+					<div class="count">
+						<button class="back back-product-count" type="button">
+							<span class="visually-hidden">Уменьшить на одного</span>
+						</button>
+
+						<input class="product-count" type="number" id="product-count" name="product-count" value="1" min="1" required>
+						<div class="error-count"></div>
+						<button class="next next-product-count" type="button">
+							<span class="visually-hidden">Увеличить на одного</span>
+						</button>
+					</div>
+				</div>
+
+				<button class="button yellow-button" type="submit">
+					<span class="yellow-button-span">Отправить</span>
+				</button>
+			</form>
+		</div>
+	</div>
+
 
 	</body>
 </html>

@@ -1836,6 +1836,12 @@ a.yellow-button:not([href]) {
   background-position: center right 20px;
 }
 
+.modal-input.name::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  position: absolute;
+  pointer-events: none;
+  right: 0;
+}
 
 .modal-input.name:invalid + .vaild-invalid-text::before {
   content: attr(data-text-invalid);

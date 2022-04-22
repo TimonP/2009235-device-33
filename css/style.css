@@ -1453,14 +1453,14 @@ a.yellow-button:not([href]) {
   background-color: transparent;
   display: grid;
   column-gap: 40px;
-  row-gap: 45px;
+  row-gap: 47px;
   grid-template-columns: repeat(6, 1fr);
   grid-template-columns: 2fr 4fr 2fr;
-  padding: 62px 0 77px 0;
+  padding: 62px 0 59px 0;
 }
 
 .page-logo-footer {
-  margin-bottom: -10px;
+  margin-bottom: -12px;
   display: block;
 }
 

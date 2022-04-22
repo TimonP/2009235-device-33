@@ -44,11 +44,10 @@ body {
   /*min-width: 1440px; раскоментировать в конце*/
 }
 
-.body-container {
+.container {
   max-width: 1160px;
   margin: 0 auto;
   background-color: transparent;
-  flex-grow: 1;
 }
 
 /*--Скрытый элемент--*/
@@ -110,9 +109,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   padding: 17.39px 60px 22.61px 60px;
-  max-width: 1160px;
   box-sizing: border-box;
-  margin: 0 auto;
   position: relative;
 }
 
@@ -734,9 +731,6 @@ body {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   padding: 0;
-  max-width: 1160px;
-  box-sizing: border-box;
-  margin: 0 auto;
   margin-top: -36px;
 }
 /*левая часть слайдера*/
@@ -914,8 +908,7 @@ body {
   column-gap: 40px;
   row-gap: 45px;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  max-width: 1160px;
-  margin: 70px auto;
+  margin: 70px 0;
 }
 
 .catalog-categories-item {
@@ -1012,8 +1005,7 @@ body {
 
 .tabs-container {
   background-color: transparent;
-  margin: 70px auto;
-  max-width: 1160px;
+  margin: 70px 0;
   min-height: 319px;
   display: flex;
   align-items: center;
@@ -1157,8 +1149,7 @@ a.yellow-button:not([href]) {
 /*-------товар под заказ ------*/
 .exclusive-delivery {
   background-color: #f0f0f0;
-  margin: 70px auto;
-  max-width: 1160px;
+  margin: 70px 0;
   min-height: 100px;
   display: flex;
   flex-wrap: nowrap;
@@ -1331,8 +1322,6 @@ a.yellow-button:not([href]) {
   column-gap: 40px;
   row-gap: 144px;
   grid-template-columns: repeat(6, 1fr);
-  max-width: 1160px;
-  margin: 0 auto;
   padding: 64px 0 56px 0;
   grid-template-areas: "a a a b b b"
                        "c c c c d d";
@@ -1468,47 +1457,45 @@ a.yellow-button:not([href]) {
   grid-template-columns: repeat(6, 1fr);
   grid-template-columns: 2fr 4fr 2fr;
   padding: 62px 0 77px 0;
-  max-width: 1160px;
-  margin: 0 auto;
 }
 
 .page-logo-footer {
-    margin-bottom: -10px;
-    display: block;
+  margin-bottom: -10px;
+  display: block;
 }
 
 .p-footer,
 .contacts-phone {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #ffffff;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
 }
 
 .yellow-line {
-    background: #ffc700;
-    width: 80px;
-    height: 7px;
-    align-self: center;
+  background: #ffc700;
+  width: 80px;
+  height: 7px;
+  align-self: center;
 }
 
 .footer-navigation-menu {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .footer-navigation-item {
-    box-sizing: border-box;
-    /*min-height: 40px;*/
-    padding: 7px 0;
+  box-sizing: border-box;
+  /*min-height: 40px;*/
+  padding: 7px 0;
 }
   
 .footer-navigation-link {
@@ -1520,11 +1507,11 @@ a.yellow-button:not([href]) {
 
 .footer-navigation-link:hover,
 .footer-navigation-link:active {
-    color: #ffc700;
+  color: #ffc700;
 }
 
 .footer-navigation-link:active {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
 @keyframes stretching-footer-link {
@@ -2123,9 +2110,8 @@ a.yellow-button:not([href]) {
 
 .inner-header {
   padding: 0 60px;
-  max-width: 1160px;
   box-sizing: border-box;
-  margin: 35px auto;
+  margin: 35px 0;
 }
 
 .inner-header .h2 {
@@ -2238,9 +2224,7 @@ a.yellow-button:not([href]) {
 
 .produst-catalog-container {
   padding-left: 60px;
-  max-width: 1160px;
   box-sizing: border-box;
-  margin: 0 auto;
   margin-top: 35px;
   display: flex;
 }
@@ -2271,7 +2255,7 @@ a.yellow-button:not([href]) {
   line-height: 18px;
   text-align: center;
   color: rgba(0, 0, 0, 0.3);
-  display: flex;
+  /*display: flex;*/
   width: max-content;
   position: absolute;
 }
@@ -2429,7 +2413,7 @@ a.yellow-button:not([href]) {
 
 .range-input {
   padding: 0;
-  padding-left: 2px;
+  /*padding-left: 2px;*/
   font: inherit;
   text-align: left;
   background-color: transparent;
@@ -2606,10 +2590,11 @@ a.yellow-button:not([href]) {
   margin-bottom: 32px;
   outline: 1px solid #444444;
   outline-offset: -1px;
+  background-color: #efefef;
 }
 
 .product-card-image {
-  width: 100%;
+  margin: 0 auto;
   display: block;
 }
 
@@ -2765,7 +2750,7 @@ a.yellow-button:not([href]) {
 .pagination-link {
   display: block;
   min-width: 40px;
-  height: 40px;
+  min-height: 40px;
   box-sizing: border-box;
   padding: 10px 0px;
   background-color: transparent;

@@ -113,31 +113,43 @@ body {
   position: relative;
 }
 
-.page-logo {
-    vertical-align: middle;
-  }
-
 .logo {
   grid-column: 1/-1;
-  justify-self: start; 
+  justify-self: start;
+  position: relative;
 }
 
-.logo:hover {
-    opacity: 0.6;
+.logo:hover .page-logo,
+.logo:hover .page-logo-footer {
+  opacity: 0.6;
 }
 
-.logo:active {
-    opacity: 0.3;
+.logo:active .page-logo,
+.logo:active .page-logo-footer {
+  opacity: 0.3;
 }
 
 .logo:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .logo:focus img {
-    outline: 2px solid #af4fff;
-    outline-offset: 2px;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.page-logo-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(0) invert(1);
+}
+
+.page-logo {
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
 }
 
 .search {
@@ -150,6 +162,10 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  margin-right: -20px;
+}
+.search-input-wrapper {
+  flex-grow: 1;
 }
 
 .search-input {
@@ -168,19 +184,19 @@ body {
   border-radius: 20px 0 0 20px;
   min-height: 40px;
   padding: 0 22px 0 48px;
-  flex-grow: 1;
   margin: 0;
   box-sizing: border-box;
   cursor: text;
+  width: 100%;
 }
 
 .search-input::-webkit-search-decoration,
 .search-input::-webkit-search-cancel-button, /*вроде как нужен только этот параметр*/
 .search-input::-webkit-search-results-button,
 .search-input::-webkit-search-results-decoration { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; 
 }
 
 .search-input::placeholder {
@@ -188,17 +204,26 @@ body {
 }
 
 .search-input:hover {
-    box-shadow: 0 0 0 1px rgba(255, 200, 0, 0.6);
+  box-shadow: 0 0 0 1px rgba(255, 200, 0, 0.6);
+}
+
+.search-input:focus {
+  box-shadow: none;
+  outline: none;
 }
   
-.search-input:focus {
-    outline: 2px solid #af4fff;
-    outline-offset: 2px;
-    box-shadow: none;
+.search-input-wrapper:focus-within {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+  box-shadow: none;
 }
 
 .search-input:disabled {
-    opacity: 0.3;
+  opacity: 0.3;
+}
+
+.search-button-wrapper {
+  margin-left: -2px;
 }
 
 .search-button {
@@ -215,30 +240,33 @@ body {
   min-height: 40px;
   flex-shrink: 0;
   margin: 0;
-  margin-left: -2px;
-  margin-right: -20px;
   box-sizing: border-box;
   cursor: pointer;
 }
 
 .search-button:hover {
-    color: #ffffff;
-    background-color: #000000;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 .search-button:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #000000;
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #000000;
+}
+
+.search-button:focus {
+  box-shadow: none;
+  outline: none;
 }
   
-.search-button:focus {
-    outline: 2px solid #af4fff;
-    outline-offset: 2px;
-    box-shadow: none;
+.search-button-wrapper:focus-within {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+  box-shadow: none;
 }
 
 .search-button:disabled {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
 .user-menu,
@@ -443,23 +471,6 @@ body {
    opacity: 1;
 }
 
-/*
-@keyframes catalog-open-close {
-  0% {
-    transform: rotate(-90deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.catalog-button:active .open-catalog::after {
-  animation-name: catalog-open-close;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-} */
-
 .catalog-button:focus {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
@@ -474,7 +485,8 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   justify-items: center;
   z-index: 2;
-  /*align-items: start;
+  /* если флекс
+  align-items: start;
   margin-right: -14.5px;
   margin-left: 17.5px;
   display: flex;
@@ -797,20 +809,7 @@ body {
   top: 80px;
 }
 
-.slider-pagination.aa {
-  position: absolute;
-  right: 0;
-  bottom: calc(0% + 173px);
-}
-
-.slider-wrapper-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.slider-wrapper .yellow-button {
+.slider-info .yellow-button {
   width: 220px;
 }
 
@@ -823,6 +822,9 @@ body {
   list-style-type: none;
   margin-right: -10px;
   align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: calc(0% + 164px);
 }
 
 .slider-pagination-item {

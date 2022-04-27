@@ -17,13 +17,18 @@
 			<div class="container">
 				<nav class="navigation">
 					<a class="logo" href="index.html">
+						<img class="page-logo-background" alt="Логотип «Device»." src="images/logo.svg" width="145" height="36">
 						<img class="page-logo" alt="Логотип «Device»." src="images/logo.svg" width="145" height="36">
 					</a>
 
 					<form class="search" action="https://echo.htmlacademy.ru/" method="post">
 						<label class="visually-hidden" for="find-product">Поиск товара</label>
-						<input class="search-input" type="search" name="find-product" id="find-product" required autocomplete="off" placeholder="Поиск по сайту" >
-						<button class="search-button" type="submit">Найти</button>
+						<div class="search-input-wrapper">
+							<input class="search-input" type="search" name="find-product" id="find-product" required autocomplete="off" placeholder="Поиск по сайту">
+						</div>
+						<div class="search-button-wrapper">
+							<button class="search-button" type="submit">Найти</button>
+						</div>
 					</form>
 
 					<div class="user-menu">

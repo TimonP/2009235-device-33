@@ -17,13 +17,18 @@
 			<div class="container">
 				<nav class="navigation">
 					<a class="logo" href="#">
+						<img class="page-logo-background" alt="Логотип «Device»." src="images/logo.svg" width="145" height="36">
 						<img class="page-logo" alt="Логотип «Device»." src="images/logo.svg" width="145" height="36">
 					</a>
 
 					<form class="search" action="https://echo.htmlacademy.ru/" method="post">
 						<label class="visually-hidden" for="find-product">Поиск товара</label>
-						<input class="search-input" type="search" name="find-product" id="find-product" required autocomplete="off" placeholder="Поиск по сайту">
-						<button class="search-button" type="submit">Найти</button>
+						<div class="search-input-wrapper">
+							<input class="search-input" type="search" name="find-product" id="find-product" required autocomplete="off" placeholder="Поиск по сайту">
+						</div>
+						<div class="search-button-wrapper">
+							<button class="search-button" type="submit">Найти</button>
+						</div>
 					</form>
 
 					<div class="user-menu">
@@ -157,7 +162,7 @@
 						</div>
 
 						<div class="slider-wrapper">
-							<!--<ol class="slider-pagination aa">
+							<ol class="slider-pagination">
 								<li class="slider-pagination-item">
 									<button class="slider-pagination-button slider-pagination-button-current" type="button">
 										<span class="visually-hidden">1 товар</span>
@@ -173,35 +178,15 @@
 										<span class="visually-hidden">3 товар</span>
 									</button>
 								</li>
-							</ol>-->
+							</ol>
 
 							<div class="slider-info slider-info-show">
 								<span class="slider-number">01</span> 
 								<h2 class="h2">Порхает как бабочка, жалит как пчела!</h2>
 								<p class="p">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-								<div class="slider-wrapper-wrapper">
-									<a class="button yellow-button" href="#">
-										<span class="yellow-button-span">Подробнее</span>
-									</a>
-
-									<ol class="slider-pagination">
-										<li class="slider-pagination-item">
-											<button class="slider-pagination-button slider-pagination-button-current" type="button">
-												<span class="visually-hidden">1 товар</span>
-											</button>
-										</li>
-										<li class="slider-pagination-item">
-											<button class="slider-pagination-button" type="button">
-												<span class="visually-hidden">2 товар</span>
-											</button>
-										</li>
-										<li class="slider-pagination-item">
-											<button class="slider-pagination-button" type="button">
-												<span class="visually-hidden">3 товар</span>
-											</button>
-										</li>
-									</ol>
-								</div>
+								<a class="button yellow-button" href="#">
+									<span class="yellow-button-span">Подробнее</span>
+								</a>
 
 								<dl class="characteristic">
 									<div>
@@ -219,29 +204,9 @@
 								<span class="slider-number">02</span> 
 								<h2 class="h2">Худеем<br> правильно!</h2>
 								<p class="p">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-								<div class="slider-wrapper-wrapper">
-									<a class="button yellow-button" href="#">
-										<span class="yellow-button-span">Подробнее</span>
-									</a>
-
-									<ol class="slider-pagination">
-										<li class="slider-pagination-item">
-											<button class="slider-pagination-button" type="button">
-												<span class="visually-hidden">1 товар</span>
-											</button>
-										</li>
-										<li class="slider-pagination-item">
-											<button class="slider-pagination-button slider-pagination-button-current" type="button">
-												<span class="visually-hidden">2 товар</span>
-											</button>
-										</li>
-										<li class="slider-pagination-item">
-											<button class="slider-pagination-button" type="button">
-												<span class="visually-hidden">3 товар</span>
-											</button>
-										</li>
-									</ol>
-								</div>
+								<a class="button yellow-button" href="#">
+									<span class="yellow-button-span">Подробнее</span>
+								</a>
 
 								<dl class="characteristic">
 									<div>
@@ -255,29 +220,9 @@
 								<span class="slider-number">03</span> 
 								<h2 class="h2">Делай селфи,<br> как Бен Стиллер!</h2>
 								<p class="p">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-								<div class="slider-wrapper-wrapper">
-									<a class="button yellow-button" href="#">
-										<span class="yellow-button-span">Подробнее</span>
-									</a>
-
-									<ol class="slider-pagination">
-										<li class="slider-pagination-item">
-											<button class="slider-pagination-button" type="button">
-												<span class="visually-hidden">1 товар</span>
-											</button>
-										</li>
-										<li class="slider-pagination-item">
-											<button class="slider-pagination-button" type="button">
-												<span class="visually-hidden">2 товар</span>
-											</button>
-										</li>
-										<li class="slider-pagination-item">
-											<button class="slider-pagination-button slider-pagination-button-current" type="button">
-												<span class="visually-hidden">3 товар</span>
-											</button>
-										</li>
-									</ol>
-								</div>
+								<a class="button yellow-button" href="#">
+									<span class="yellow-button-span">Подробнее</span>
+								</a>
 
 								<dl class="characteristic">
 									<div>
@@ -395,8 +340,8 @@
 			</section>
 
 			<section>
-				<h2 class="visually-hidden">Эксклюзивная доставка</h2>
 				<div class="container">
+					<h2 class="visually-hidden">Эксклюзивная доставка</h2>
 					<a class="exclusive-delivery" href="#">
 						<div class="emblem">
 							<svg aria-hidden="true" focusable="false" width="47" height="31" viewBox="0 0 47 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -413,11 +358,7 @@
 							</span>
 						</div>
 					</a>
-				</div>
-			</section>
 
-			<section>
-				<div class="container">
 					<ul class="about-list">
 						<li class="about-item">
 							<h2 class="h2">О нас</h2>

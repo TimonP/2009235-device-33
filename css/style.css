@@ -97,6 +97,7 @@ body {
   border: none;
   outline: none;
   box-shadow: none;
+  margin: 0;
 }
 
 /*-------- ХЕДЕР --------*/
@@ -162,7 +163,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  margin-right: -20px;
+  margin-right: -17px;
 }
 .search-input-wrapper {
   flex-grow: 1;
@@ -178,16 +179,17 @@ body {
   background-color: transparent;
   background-image: url("../images/search-ico.svg");
   background-size: 16px 16px;
-  background-position: left 16px center;
+  background-position: left 15px center;
   background-repeat: no-repeat;
   border: 2px solid #000000;
   border-radius: 20px 0 0 20px;
   min-height: 40px;
-  padding: 0 22px 0 48px;
+  padding: 0 22px 0 44px;
   margin: 0;
   box-sizing: border-box;
   cursor: text;
   width: 100%;
+  height: 100%;
 }
 
 .search-input::-webkit-search-decoration,
@@ -322,7 +324,7 @@ body {
 }
 
 .user-menu-left > .user-menu-item:first-child {
-  margin-right: 24px;
+  margin-right: 28px;
 }
 
 .user-menu-right > .user-menu-item:first-child {
@@ -388,6 +390,10 @@ body {
   word-wrap: break-word;
 }
 
+.product-count-output + svg {
+  margin-right: 10px;
+}
+
 .logout {
   opacity: 0.3;
 }
@@ -424,6 +430,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 0;
   margin-right: auto;
   padding: 0;
   position: relative;
@@ -443,7 +450,7 @@ body {
   opacity: 0.3;
   position: relative;
   display: inline-block;
-  margin-left: 7px;
+  margin-left: 16px;
   flex-shrink: 0;
 }
 
@@ -741,9 +748,9 @@ body {
   column-gap: 40px;
   row-gap: 30px;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  /*align-items: center;*/
   padding: 0;
-  margin-top: -36px;
+  margin-top: -37px;
 }
 /*левая часть слайдера*/
 .slider-wrapper {
@@ -760,7 +767,7 @@ body {
 
 .slider-controls {
   position: absolute;
-  bottom: 50%;
+  bottom: 51.6%;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -785,14 +792,14 @@ body {
 
 /*правая часть слайдера*/
 .slider .h2 {
-  margin-block-start: 121px;
+  margin-block-start: 122px;
   margin-block-end: 29px;
   position: relative;
   min-height: 100px;
 }
 
 .slider .p {
-  margin-block-end: 60px;
+  margin-block-end: 50px;
   min-height: 60px;
 }
 
@@ -806,7 +813,7 @@ body {
   color: #ffffff;
   position: absolute;
   right: 49px;
-  top: 80px;
+  top: 82px;
 }
 
 .slider-info .yellow-button {
@@ -824,7 +831,7 @@ body {
   align-items: center;
   position: absolute;
   right: 0;
-  bottom: calc(0% + 164px);
+  bottom: 163px;
 }
 
 .slider-pagination-item {
@@ -850,7 +857,7 @@ body {
 }
 
 .characteristic {
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   margin-left: -10px;
@@ -1026,7 +1033,7 @@ body {
 }
 
 .tabs-list {
-  flex: 1 0 280px;
+  flex: 0 0 280px;
   padding: 64px 0;
   order: 1;
   align-self: start;
@@ -1042,10 +1049,12 @@ body {
   position: relative;
   color: inherit;
   display: inherit;
+  transform: translateX(2px) translateY(1px);
 }
 
 .tabs-list .yellow-button-span {
-  width: 140px;
+  min-width: 140px;
+  width: min-content;
 }
 
 .tabs-button-active {
@@ -1159,6 +1168,13 @@ a.yellow-button:not([href]) {
   justify-content: space-between;
 }
 
+.exclusive-delivery span {
+  font-size: 20px;
+  line-height: 23px;
+  padding-top: 3px;
+  letter-spacing: 0.2em;
+}
+
 .emblem {
   flex: 0 0 125px;
   position: relative;
@@ -1179,10 +1195,6 @@ a.yellow-button:not([href]) {
   cursor: pointer;
   outline: none;
   box-shadow: none;
-  background-image: url("../img/info.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
   display: block;
   position: relative;
   margin: auto;
@@ -1230,9 +1242,9 @@ a.yellow-button:not([href]) {
 .about-list {
   background-color: transparent;
   display: grid;
-  column-gap: 90px;
+  column-gap: 128px;
   row-gap: 45px;
-  grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+  grid-template-columns: 500px 510px;
   max-width: 1160px;
   margin: 70px auto;
 }
@@ -1311,7 +1323,7 @@ a.yellow-button:not([href]) {
 }
 
 .about-item:last-child .yellow-button {
-  width: 259px;
+  min-width: 259px;
 }
 
 /*-------- рассылка -----*/
@@ -1322,20 +1334,23 @@ a.yellow-button:not([href]) {
   background-color: transparent;
   display: grid;
   column-gap: 40px;
-  row-gap: 144px;
+  row-gap: 139px;
   grid-template-columns: repeat(6, 1fr);
-  padding: 64px 0 56px 0;
+  padding: 65px 0 51px 0;
   grid-template-areas: "a a a b b b"
-                       "c c c c d d";
+                       "c c c c c d";
   align-items: center;
 }
 
 .mailing-cotainer .h2 {
   grid-area: a;
+  margin-left: 7px;
 }
 
 .mailing-cotainer .p {
   grid-area: b;
+  margin-left: 7px;
+  margin-top: auto;
 }
 
 .mailing-cotainer .email {
@@ -1347,7 +1362,7 @@ a.yellow-button:not([href]) {
   align-content: center;
   justify-content: center;
   margin: 0;
-  margin-right: -30px;
+  margin-right: 149px;
 }
 
 .email-input {
@@ -1490,14 +1505,15 @@ a.yellow-button:not([href]) {
 .footer-navigation-menu {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-evenly;
+  margin-left: 10px;
+  margin-right: 20px;
 }
 
 .footer-navigation-item {
   box-sizing: border-box;
   /*min-height: 40px;*/
-  padding: 7px 0;
+  padding: 2px 0;
 }
   
 .footer-navigation-link {
@@ -1551,14 +1567,13 @@ a.yellow-button:not([href]) {
 }
 
 .footer-navigation-link:focus {
-    box-shadow: 0 0 0 2px #af4fff;
-    outline: none;
+  box-shadow: 0 0 0 2px #af4fff;
+  outline: none;
 }
 
 .contacts-phone-div {
-    justify-self: end;
-    align-self: center;
-    display: block;
+  justify-self: end;
+  display: block;
 }
 
 .contacts-phone:hover {
@@ -1583,12 +1598,11 @@ a.yellow-button:not([href]) {
 }
 
 .social-item + .social-item {
-  margin-left: 11px;
+  margin-left: 15px;
 }
 
 .social-link {
   display: block;
-  padding: 2px;
 }
 
 .social-link-span {
@@ -1625,8 +1639,9 @@ a.yellow-button:not([href]) {
 }
   
 .social-link:focus {
-  box-shadow: 0 0 0 2px #af4fff;
-  outline: none;
+  box-shadow: none;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 /*------------Логотип htmlacademy-----------*/
@@ -2047,9 +2062,9 @@ a.yellow-button:not([href]) {
 
 .tooltip {
   position: absolute;
-  margin-left: 8px;
+  margin-left: 9px;
   display: inline-block;
-  transform: translateY(-12%);
+  transform: translateY(-15%);
 }
 
 .dop-info {
@@ -2113,11 +2128,11 @@ a.yellow-button:not([href]) {
 .inner-header {
   padding: 0 60px;
   box-sizing: border-box;
-  margin: 35px 0;
+  margin: 35px 0 0 0;
 }
 
 .inner-header .h2 {
-  margin-block-end: 16px;
+  margin-block-end: 10px;
 }
 
 .breadcrumbs {
@@ -2160,6 +2175,7 @@ a.yellow-button:not([href]) {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+  letter-spacing: 0.1px
 }
 
 .breadcrumbs-link:hover {
@@ -2179,7 +2195,7 @@ a.yellow-button:not([href]) {
 
 .produst-catalog {
   background-color: #f0f0f0;
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 .h3-catalog {
@@ -2197,7 +2213,7 @@ a.yellow-button:not([href]) {
 
 .catalog-filter .h3-catalog {
   margin-top: 25.5px;
-  margin-bottom: 72px;
+  margin-bottom: 70px;
 }
 
 .catalog-filter {
@@ -2208,36 +2224,40 @@ a.yellow-button:not([href]) {
 
 .catalog-filter-group {
   margin: 0;
-  margin-top: 47px;
+  margin-top: 45px;
   padding: 0;
   border: none;
   position: relative;
 }
 
-.catalog-filter-group::before {
+/*.catalog-filter-group::before*/
+.catalog-filter-title::before {
   content: "";
   background-color: #000000;
   height: 2px;
-  position: absolute;
-  top: -30px;
-  left: 0;
-  right: 20px;
+  display: block;
+  position: relative;
+  margin: 0;
+  width: 200px;
+  top: -12px;
+  left: -2px;
 }
 
 .produst-catalog-container {
   padding-left: 60px;
   box-sizing: border-box;
-  margin-top: 35px;
   display: flex;
 }
 
-.product-card-title, .catalog-filter-title {
+.product-card-title, 
+.catalog-filter-title {
   font-family: 'Rubik', "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  letter-spacing: -0.02em;
+  /*letter-spacing: -0.02em;*/
+  letter-spacing: -0.1px;
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -2354,7 +2374,7 @@ a.yellow-button:not([href]) {
 .range-scale {
   position: relative;
   height: 2px;
-  margin-top: 30px;
+  margin-top: 27px;
   margin-bottom: 33px;
   margin-right: 20px;
   background-color: #dcdcdc;
@@ -2445,13 +2465,13 @@ a.yellow-button:not([href]) {
   line-height: 19px;
   position: relative;
   display: block;
-  padding-left: 26px;
+  padding-left: 36px;
 }
 
 
 .catalog-filter .yellow-button {
   width: 220px;
-  margin-top: 36px;
+  margin-top: 39px;
 }
 
 .catalog-right-column {
@@ -2460,10 +2480,11 @@ a.yellow-button:not([href]) {
 
 .sorting-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   min-height: 70px;
-  margin-right: 40px;
+  margin: 0 40px;
 }
 
 .select-control {
@@ -2558,7 +2579,7 @@ a.yellow-button:not([href]) {
   background-color: transparent;
   display: grid;
   column-gap: 40px;
-  row-gap: 44px;
+  row-gap: 43px;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 }
 
@@ -2668,7 +2689,7 @@ a.yellow-button:not([href]) {
 
 .white-button {
   display: block;
-  min-height: 50px;
+  min-height: 55px;
   width: 100%;
   box-sizing: border-box;
   border: 3px solid #e5e5e5;
@@ -2676,6 +2697,8 @@ a.yellow-button:not([href]) {
   padding: 0;
   margin: 0;
   cursor: pointer;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .white-button:hover {
@@ -2713,6 +2736,7 @@ a.yellow-button:not([href]) {
   outline: none;
   box-shadow: none;
   padding: 25px;
+  padding-right: 22px;
   margin: 0;
   background-color: #ebebeb;
   cursor: pointer;

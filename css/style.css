@@ -550,7 +550,7 @@ body {
   top: calc(100% - 40px);
   z-index: 1;
   display: flex;
-  padding: 33px 60px 27px 60px;
+  padding: 25px 60px 33px 60px;
 }
 
 .open-catalog + .catalog-list-close {
@@ -1279,7 +1279,7 @@ a.yellow-button:not([href]) {
   content: " ";
   margin-right: 26px;
   border-radius: 50%;
-  transform: translateY(-25%);
+  transform: translateY(-25%) translateX(2px);
   order: -1;
   flex: 0 0 8px;
 }
@@ -1323,7 +1323,7 @@ a.yellow-button:not([href]) {
 }
 
 .about-item:last-child .yellow-button {
-  min-width: 259px;
+  width: 259px;
 }
 
 /*-------- рассылка -----*/
@@ -1732,6 +1732,7 @@ a.yellow-button:not([href]) {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 26px 26px;
+  flex-shrink: 0;
 }
 
 .close-window:hover {
@@ -2100,7 +2101,7 @@ a.yellow-button:not([href]) {
   text-transform: none;
   position: absolute;
   top: 100%;
-  transform: translateX(-75%) translateY(10px);
+  transform: translateX(-76%) translateY(10px);
   left: 50%;
   display: none;
   margin: 0;
@@ -2114,7 +2115,7 @@ a.yellow-button:not([href]) {
   position: absolute;
   transform: rotate(0deg);
   bottom: 100%;
-  left: 75%;
+  left: 76%;
   transform: translateX(-50%);
 }
 

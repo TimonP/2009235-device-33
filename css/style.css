@@ -1,4 +1,4 @@
-/*тут важен порядок!*/
+/* тут важен порядок */
 @font-face {
   font-family: "Rubik";
   font-style: normal;
@@ -31,7 +31,6 @@ body {
   padding: 0;
   margin: 0;
   background: #ffffff;
-  /**/
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -41,7 +40,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
-  /*min-width: 1440px; раскоментировать в конце*/
+  min-width: 1440px;
 }
 
 .container {
@@ -63,7 +62,7 @@ body {
 }
 
 .h2 {
-  font-family: 'Raleway', "Tahoma", sans-serif;
+  font-family: "Raleway", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
@@ -76,7 +75,7 @@ body {
 }
 
 .p {
-  font-family: 'Rubik', "Tahoma", sans-serif;
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -103,7 +102,7 @@ body {
 /*-------- ХЕДЕР --------*/
 .navigation {
   background: #ffe17f;
-  background-image: linear-gradient(#fff 0 40px, #ffe17f 40px 100%);
+  background-image: linear-gradient(#ffffff 0 40px, #ffe17f 40px 100%);
   display: grid;
   column-gap: 40px;
   row-gap: 30px;
@@ -118,6 +117,12 @@ body {
   grid-column: 1/-1;
   justify-self: start;
   position: relative;
+}
+
+.page-logo {
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
 }
 
 .logo:hover .page-logo,
@@ -147,12 +152,6 @@ body {
   filter: brightness(0) invert(1);
 }
 
-.page-logo {
-  vertical-align: middle;
-  position: relative;
-  z-index: 1;
-}
-
 .search {
   display: flex;
   align-content: center;
@@ -165,6 +164,7 @@ body {
   line-height: 20px;
   margin-right: -17px;
 }
+
 .search-input-wrapper {
   flex-grow: 1;
 }
@@ -193,12 +193,12 @@ body {
 }
 
 .search-input::-webkit-search-decoration,
-.search-input::-webkit-search-cancel-button, /*вроде как нужен только этот параметр*/
+.search-input::-webkit-search-cancel-button,
 .search-input::-webkit-search-results-button,
-.search-input::-webkit-search-results-decoration { 
+.search-input::-webkit-search-results-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; 
+  appearance: none;
 }
 
 .search-input::placeholder {
@@ -213,7 +213,7 @@ body {
   box-shadow: none;
   outline: none;
 }
-  
+
 .search-input-wrapper:focus-within {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
@@ -260,7 +260,7 @@ body {
   box-shadow: none;
   outline: none;
 }
-  
+
 .search-button-wrapper:focus-within {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
@@ -308,7 +308,6 @@ body {
   flex-wrap: wrap;
   align-items: center;
   align-content: flex-start;
-  /*flex: 1 1 235px;*/
 }
 
 .user-menu-right {
@@ -316,7 +315,6 @@ body {
   flex-wrap: wrap;
   align-items: center;
   margin-left: auto;
-  /*flex: 1 1 245px;*/
 }
 
 .user-menu-item {
@@ -350,25 +348,25 @@ body {
   margin-right: 13px;
   margin-left: 0;
   padding: 0;
-  fill: #000;
+  fill: #000000;
   display: inline-block;
 }
 
 .user-menu-link:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .user-menu-link:active {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 
 .user-menu-link:focus {
-    box-shadow: 0 0 0 2px #af4fff;
-    outline: none;
+  box-shadow: 0 0 0 2px #af4fff;
+  outline: none;
 }
 
 .product-count-output {
-  font-family: 'Rubik';
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -475,7 +473,7 @@ body {
 
 .catalog-button:hover .catalog-button-span,
 .catalog-button:active .catalog-button-span {
-   opacity: 1;
+  opacity: 1;
 }
 
 .catalog-button:focus {
@@ -492,18 +490,9 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   justify-items: center;
   z-index: 2;
-  /* если флекс
-  align-items: start;
-  margin-right: -14.5px;
-  margin-left: 17.5px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;*/
 }
 
 .navigation-item {
-  /*flex: 1 0 127px;*/
   margin: 0;
   padding-top: calc(8px / 2);
   box-sizing: border-box;
@@ -608,14 +597,14 @@ body {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
-/* поповер*/
 
+/* поповер*/
 .popover {
   position: absolute;
   transform: translateX(-50%);
   left: 35px;
   z-index: 3;
-  font-family: 'Rubik', "Tahoma", sans-serif;
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -630,7 +619,7 @@ body {
 
 .popover::after {
   content: "";
-  background-image: url(../images/triangle.svg);
+  background-image: url("../images/triangle.svg");
   width: 14px;
   height: 6px;
   position: absolute;
@@ -673,7 +662,7 @@ body {
   width: 10px;
   height: 10px;
   background-color: transparent;
-  background-image: url(../images/close.svg);
+  background-image: url("../images/close.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -737,7 +726,7 @@ body {
 
 /*-------- МЕИН --------*/
 .page-main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 /* Слайдер */
@@ -748,10 +737,10 @@ body {
   column-gap: 40px;
   row-gap: 30px;
   grid-template-columns: repeat(2, 1fr);
-  /*align-items: center;*/
   padding: 0;
   margin-top: -37px;
 }
+
 /*левая часть слайдера*/
 .slider-wrapper {
   position: relative;
@@ -804,7 +793,7 @@ body {
 }
 
 .slider-number {
-  font-family: 'Rubik', "Tahoma", sans-serif;
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 180px;
@@ -871,7 +860,7 @@ body {
 }
 
 .characteristic dd {
-  font-family: 'Rubik', "Tahoma", sans-serif;
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -881,13 +870,13 @@ body {
 }
 
 .characteristic dt {
-  font-family: 'Rubik', "Tahoma", sans-serif;
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
   color: #444444;
-  padding-top: 12px
+  padding-top: 12px;
 }
 
 /*---*/
@@ -909,7 +898,6 @@ body {
   opacity: 0.1;
 }
 
-
 /* Список категорий каталога */
 .catalog-categories {
   background-color: transparent;
@@ -926,7 +914,7 @@ body {
 }
 
 .catalog-categories-link {
-  font-family: 'Raleway', "Tahoma", sans-serif;
+  font-family: "Raleway", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -952,37 +940,37 @@ body {
 }
 
 .virtual-reality {
-  background-image: url(../images/virtual-reality.svg);
+  background-image: url("../images/virtual-reality.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .selfie-monopods {
-  background-image: url(../images/selfie-monopods.svg);
+  background-image: url("../images/selfie-monopods.svg");
   background-repeat: no-repeat;
   background-position: center bottom 0;
 }
 
 .action-cameras {
-  background-image: url(../images/action-cameras.svg);
+  background-image: url("../images/action-cameras.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .fitness-bracelets {
-  background-image: url(../images/fitness-bracelets.svg);
+  background-image: url("../images/fitness-bracelets.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .smart-watches {
-  background-image: url(../images/smart-watches.svg);
+  background-image: url("../images/smart-watches.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .quadcopters {
-  background-image: url(../images/quadcopters.svg);
+  background-image: url("../images/quadcopters.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1024,7 +1012,7 @@ body {
 }
 
 .tabs-container::before {
-  content: ' ';
+  content: " ";
   width: 7px;
   order: 2;
   flex-shrink: 0;
@@ -1080,6 +1068,7 @@ body {
   0% {
     height: 8px;
   }
+
   100% {
     height: 100%;
   }
@@ -1129,7 +1118,6 @@ a.yellow-button:not([href]) {
 }
 
 .tabs-info-item {
-  display: flex;
   padding: 64px 28px 64px 116px;
   flex-direction: row;
   justify-content: space-between;
@@ -1285,7 +1273,7 @@ a.yellow-button:not([href]) {
 }
 
 .delivery-company-item {
-  font-family: 'Rubik', "Tahoma", sans-serif;
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -1305,7 +1293,7 @@ a.yellow-button:not([href]) {
 }
 
 .h3 {
-  font-family: 'Rubik', "Tahoma", sans-serif;
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -1330,6 +1318,7 @@ a.yellow-button:not([href]) {
 .mailing {
   background-color: #f0f0f0;
 }
+
 .mailing-cotainer {
   background-color: transparent;
   display: grid;
@@ -1358,7 +1347,7 @@ a.yellow-button:not([href]) {
 }
 
 .email {
-  display: flex; /*схлопывает input и button*/
+  display: flex;
   align-content: center;
   justify-content: center;
   margin: 0;
@@ -1366,7 +1355,7 @@ a.yellow-button:not([href]) {
 }
 
 .email-input {
-  font-family: 'Rubik', "Tahoma", sans-serif;
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1471,7 +1460,6 @@ a.yellow-button:not([href]) {
   display: grid;
   column-gap: 40px;
   row-gap: 47px;
-  grid-template-columns: repeat(6, 1fr);
   grid-template-columns: 2fr 4fr 2fr;
   padding: 62px 0 59px 0;
 }
@@ -1487,7 +1475,7 @@ a.yellow-button:not([href]) {
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
-  font-family: 'Rubik';
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1512,10 +1500,9 @@ a.yellow-button:not([href]) {
 
 .footer-navigation-item {
   box-sizing: border-box;
-  /*min-height: 40px;*/
   padding: 2px 0;
 }
-  
+
 .footer-navigation-link {
   color: #ffffff;
   padding: 2px;
@@ -1534,8 +1521,9 @@ a.yellow-button:not([href]) {
 
 @keyframes stretching-footer-link {
   0% {
-    width: 0px;
+    width: 0;
   }
+
   100% {
     width: 98%;
     left: 0%;
@@ -1623,13 +1611,13 @@ a.yellow-button:not([href]) {
   margin: auto;
   fill: #444444;
 }
-  
-.social-link:hover .social-link-span{
+
+.social-link:hover .social-link-span {
   background-color: #ffc700;
   transition: background-color 0.3s;
 }
 
-.social-link:active .social-link-span{
+.social-link:active .social-link-span {
   background-color: #ffc700;
 }
 
@@ -1637,7 +1625,7 @@ a.yellow-button:not([href]) {
   fill: #444444;
   opacity: 0.3;
 }
-  
+
 .social-link:focus {
   box-shadow: none;
   outline: 2px solid #af4fff;
@@ -1655,7 +1643,7 @@ a.yellow-button:not([href]) {
   padding: 2px;
   right: -2px;
 }
-  
+
 .htmlacademy-logo-link svg {
   position: absolute;
   top: 0;
@@ -1702,7 +1690,7 @@ a.yellow-button:not([href]) {
   padding: 62px 70px;
   background-color: #ffffff;
   border: 10px solid #000000;
-  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .modal-exclusive-delivery {
@@ -1728,7 +1716,7 @@ a.yellow-button:not([href]) {
   outline: none;
   box-shadow: none;
   background-color: transparent;
-  background-image: url(../images/close-modal.svg);
+  background-image: url("../images/close-modal.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 26px 26px;
@@ -1785,7 +1773,7 @@ a.yellow-button:not([href]) {
 
 
 .vaild-invalid-text {
-  font-family: 'Rubik', "Tahoma", sans-serif;
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1796,7 +1784,7 @@ a.yellow-button:not([href]) {
 }
 
 .modal-form-label {
-  font-family: 'Rubik', "Tahoma", sans-serif;
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -1807,7 +1795,7 @@ a.yellow-button:not([href]) {
 }
 
 .modal-input {
-  font-family: 'Rubik';
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1828,14 +1816,14 @@ a.yellow-button:not([href]) {
 }
 
 .modal-input.name {
-  background-image: url(../images/user-menu-user.svg);
+  background-image: url("../images/user-menu-user.svg");
   background-repeat: no-repeat;
   background-size: 13px 12px;
   background-position: center right 21px;
 }
 
 .modal-input.e-mail {
-  background-image: url(../images/email-ico.svg);
+  background-image: url("../images/email-ico.svg");
   background-repeat: no-repeat;
   background-size: 15px 12px;
   background-position: center right 20px;
@@ -1966,6 +1954,7 @@ a.yellow-button:not([href]) {
   cursor: default;
   opacity: 0.3;
 }
+
 .back:disabled::before,
 .next:disabled::after,
 .next:disabled::before,
@@ -1975,7 +1964,6 @@ a.yellow-button:not([href]) {
   opacity: 0.3;
 }
 
-
 .product-count {
   font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
@@ -1984,7 +1972,6 @@ a.yellow-button:not([href]) {
   line-height: 20px;
   padding: 0;
   margin: 0;
-  background-color: transparent;
   border: none;
   outline: none;
   box-shadow: none;
@@ -2086,14 +2073,13 @@ a.yellow-button:not([href]) {
   display: block;
 }
 
-
 .tooltip-text {
   width: 200px;
   min-height: 160px;
   box-sizing: border-box;
   padding: 19px;
   background: #000000;
-  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
@@ -2109,11 +2095,10 @@ a.yellow-button:not([href]) {
 
 .tooltip-text::after {
   content: "";
-  background-image: url(../images/triangle.svg);
+  background-image: url("../images/triangle.svg");
   width: 14px;
   height: 6px;
   position: absolute;
-  transform: rotate(0deg);
   bottom: 100%;
   left: 76%;
   transform: translateX(-50%);
@@ -2154,12 +2139,12 @@ a.yellow-button:not([href]) {
   content: "";
   position: absolute;
   top: 50%;
-  right: -20px; /*16 по макету*/
+  right: -20px;/*16 по макету*/
   width: 4px;
   height: 7px;
   opacity: 0.2;
   background-color: transparent;
-  background-image: url(../images/breadcrumbs.svg);
+  background-image: url("../images/breadcrumbs.svg");
   background-position: center;
   background-size: 4px 7px;
   background-repeat: no-repeat;
@@ -2176,7 +2161,7 @@ a.yellow-button:not([href]) {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  letter-spacing: 0.1px
+  letter-spacing: 0.1px;
 }
 
 .breadcrumbs-link:hover {
@@ -2200,7 +2185,7 @@ a.yellow-button:not([href]) {
 }
 
 .h3-catalog {
-  font-family: 'Raleway', "Tahoma", sans-serif;
+  font-family: "Raleway", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 16px;
@@ -2250,14 +2235,13 @@ a.yellow-button:not([href]) {
   display: flex;
 }
 
-.product-card-title, 
+.product-card-title,
 .catalog-filter-title {
-  font-family: 'Rubik', "Tahoma", sans-serif;
+  font-family: "Rubik", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  /*letter-spacing: -0.02em;*/
   letter-spacing: -0.1px;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -2265,7 +2249,8 @@ a.yellow-button:not([href]) {
 
 .product-card-price {
   line-height: 21px;
-  flex-shrink: 0;
+  flex: 5 0 80px;
+  text-align: end;
 }
 
 .range-wrapper-inputs {
@@ -2278,7 +2263,6 @@ a.yellow-button:not([href]) {
   line-height: 18px;
   text-align: center;
   color: rgba(0, 0, 0, 0.3);
-  /*display: flex;*/
   width: max-content;
   position: absolute;
 }
@@ -2325,7 +2309,7 @@ a.yellow-button:not([href]) {
   width: 10px;
   height: 10px;
   background-color: transparent;
-  background-image: url(../images/vv.svg);
+  background-image: url("../images/vv.svg");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -2351,7 +2335,7 @@ a.yellow-button:not([href]) {
 
 .control-input[type="checkbox"]:not(:checked) + .control-mark,
 .control-input[type="radio"]:not(:checked) + .control-mark {
-  border: 2px solid #cccccc; 
+  border: 2px solid #cccccc;
 }
 
 .control-input:focus + .control-mark {
@@ -2436,7 +2420,6 @@ a.yellow-button:not([href]) {
 
 .range-input {
   padding: 0;
-  /*padding-left: 2px;*/
   font: inherit;
   text-align: left;
   background-color: transparent;
@@ -2490,7 +2473,6 @@ a.yellow-button:not([href]) {
 
 .select-control {
   font: inherit;
-  /*min-width: 160px; -11 +2*/
   min-width: 151px;
   margin-right: 9px;
   padding: 0;
@@ -2498,7 +2480,7 @@ a.yellow-button:not([href]) {
   background-color: transparent;
   border: none;
   outline: none;
-  background-image: url(../images/select-arrow.svg);
+  background-image: url("../images/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: top 12px right 2px;
   background-size: 10px 7px;
@@ -2576,7 +2558,7 @@ a.yellow-button:not([href]) {
   background-color: #ffffff;
 }
 
-.product-list  {
+.product-list {
   background-color: transparent;
   display: grid;
   column-gap: 40px;
@@ -2591,7 +2573,7 @@ a.yellow-button:not([href]) {
   display: block;
 }
 
-.product-card-link:hover .product-card-content{
+.product-card-link:hover .product-card-content {
   opacity: 0.6;
 }
 
@@ -2662,11 +2644,12 @@ a.yellow-button:not([href]) {
 }
 
 .product-card-title {
-  margin-right: 71px;
+  margin-right: 10px;
+  flex: 1 5 210px;
 }
 
 .new::before {
-  font-family: 'Raleway', "Tahoma", sans-serif;
+  font-family: "Raleway", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 14px;
@@ -2732,7 +2715,6 @@ a.yellow-button:not([href]) {
 .pagination-prev,
 .pagination-next {
   display: block;
-  background-color: transparent;
   border: none;
   outline: none;
   box-shadow: none;
@@ -2769,7 +2751,8 @@ a.yellow-button:not([href]) {
 
 .pagination {
   display: flex;
-  margin: 0;
+  flex-wrap: wrap;
+  margin: 0 25px;
   padding: 0;
   background-color: transparent;
 }
@@ -2779,7 +2762,7 @@ a.yellow-button:not([href]) {
   min-width: 40px;
   min-height: 40px;
   box-sizing: border-box;
-  padding: 10px 0px;
+  padding: 10px 0;
   background-color: transparent;
   font-size: 16px;
   line-height: 20px;

@@ -3,12 +3,28 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/rubik/Rubik.woff2") format("woff2");
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik2";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/Rubik.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik2";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/rubik/Rubikbold.woff2") format("woff2");
@@ -75,7 +91,7 @@ body {
 }
 
 .p {
-  font-family: "Rubik", "Tahoma", sans-serif;
+  font-family: "Rubik2", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -801,7 +817,7 @@ body {
   align-items: center;
   color: #ffffff;
   position: absolute;
-  right: 47px;
+  right: 48px;
   top: 82px;
 }
 
@@ -1259,7 +1275,7 @@ a.yellow-button:not([href]) {
 }
 
 .delivery-company-item {
-  font-family: "Rubik", "Tahoma", sans-serif;
+  font-family: "Rubik2", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -1293,7 +1309,7 @@ a.yellow-button:not([href]) {
 }
 
 .h3 {
-  font-family: "Rubik", "Tahoma", sans-serif;
+  font-family: "Rubik2", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -1475,7 +1491,7 @@ a.yellow-button:not([href]) {
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
-  font-family: "Rubik", "Tahoma", sans-serif;
+  font-family: "Rubik2", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -2242,7 +2258,7 @@ a.yellow-button:not([href]) {
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-block-start: 0;
   margin-block-end: 0;
 }

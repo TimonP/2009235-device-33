@@ -1258,6 +1258,18 @@ a.yellow-button:not([href]) {
   margin-block-end: 30px;
 }
 
+.delivery-company-item {
+  font-family: "Rubik", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  /*letter-spacing: -0.02em; по пиксель перфект не сошлось*/
+  color: #000000;
+  display: flex;
+  align-items: baseline;
+}
+
 .delivery-company-item::before {
   background-color: #ffc700;
   display: inline-block;
@@ -1270,18 +1282,6 @@ a.yellow-button:not([href]) {
   transform: translateY(-25%) translateX(2px);
   order: -1;
   flex: 0 0 8px;
-}
-
-.delivery-company-item {
-  font-family: "Rubik", "Tahoma", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  letter-spacing: -0.02em;
-  color: #000000;
-  display: flex;
-  align-items: baseline;
 }
 
 .delivery-company-item + .delivery-company-item {
@@ -1303,6 +1303,7 @@ a.yellow-button:not([href]) {
   margin-block-end: 15px;
   margin-inline-start: 0;
   margin-inline-end: 0;
+  letter-spacing: 0.01em;
 }
 
 .about-item .contacts-phone {

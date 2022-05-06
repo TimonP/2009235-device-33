@@ -788,6 +788,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   margin-left: 30px;
+  padding: 0;
+  display: flex;
 }
 
 .slider-prev {
@@ -852,12 +854,11 @@ body {
   padding: 0;
   border-radius: 50%;
   cursor: pointer;
-  display: block;
+  display: flex;
 }
 
 .slider-pagination-button-current {
   background-color: #000000;
-  border: none;
 }
 
 .characteristic {
@@ -904,8 +905,25 @@ body {
 
 .slider button:focus {
   box-shadow: none;
+  outline: none;
+}
+
+.slider button:focus::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
   outline: 2px solid #af4fff;
+  box-shadow: none;
+}
+
+.slider-button:focus::after {
   outline-offset: 2px;
+}
+
+.slider-pagination-button:focus::after {
+  outline-offset: 4px;
 }
 
 .slider button:disabled {

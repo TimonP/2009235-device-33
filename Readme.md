@@ -1,7 +1,5 @@
 # Личный проект «Девайс»
-
-* Студент: [Polina Timonina](https://up.htmlacademy.ru/htmlcss/33/user/2009235).
-* Наставник: `Неизвестно`.
+https://timonp.github.io/2009235-device-33/
 
 ---
 
